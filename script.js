@@ -32,10 +32,12 @@ const account4 = {
   interestRate: 1,
   pin: 4444,
 };
-// localStorage.setItem(
-//   'accounts',
-//   JSON.stringify([account1, account2, account3, account4])
-// );
+if(JSON.parse(localStorage.getItem('accounts')) == null){
+localStorage.setItem(
+  'accounts',
+  JSON.stringify([account1, account2, account3, account4])
+);
+}
 let accounts = JSON.parse(localStorage.getItem('accounts'));
 console.log(accounts);
 
